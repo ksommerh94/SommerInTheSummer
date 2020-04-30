@@ -7,6 +7,13 @@ body{
   margin: 0;
 }
 
+@font-face {
+  font-family: 'adelline';
+  src:url('../fonts/Australia Script.ttf');
+  /* font-style: normal; */
+
+}
+
 .container{
 width: 80%;
 margin:auto;
@@ -16,6 +23,9 @@ overflow: hidden;
 #main-header{
   background-color:  #999966;
   color:#fff;
+  font-family: adelline;
+  margin-left: none;
+  text-align: right;
 }
 
 #main-nav{
@@ -44,7 +54,10 @@ overflow: hidden;
   background-position: center right;
   min-height: 300 px;
   margin-bottom: 30px;
-  text-align: ceneter;
+  text-align: center;
+  font-family: adelline;
+
+
 }
 
 #showcase h1{
