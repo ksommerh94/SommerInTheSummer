@@ -14,12 +14,12 @@ overflow: hidden;
 
 }
 #main-header{
-  background-color: coral;
+  background-color:  #999966;
   color:#fff;
 }
 
 #main-nav{
-  background-color: gray;
+  background-color: #333;
   color:#fff
 }
 #main-nav ul{
@@ -40,7 +40,7 @@ overflow: hidden;
 }
 
 #showcase{
-  background-image: url('../images/Desert.jpg');
+  background-image: url('../images/background.jpg');
   background-position: center right;
   min-height: 300 px;
   margin-bottom: 30px;
