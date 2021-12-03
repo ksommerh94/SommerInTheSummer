@@ -1,53 +1,161 @@
+/* ------ reset ------*/
+
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* ------ base styles ------*/
+
+/* -- element selector -- */
+h2.logo{
+  color:#fff;
+}
+
 body{
   background-color: #f4f4f4;
   color: #555;
-  font-family: Arial;
+  font-family: Verdana;
   front-size:16px;
   line-height: 1.6em;
   margin: 0;
-  
 }
 
-@font-face {
-  font-family: 'adelline';
-  src:url('../fonts/Australia Script.ttf');
-  /* font-style: normal; */
+div a{
+  text-decoration: none;
+  color:black;
+  padding-left: 15px;
+  font-family: adelline;
+  font-size: 2em;
+  line-height: 1.8;
+
+}
+div p{
+  text-decoration: none;
+  color:black;
+  font-family: Verdana;
+  font-size: 0.45em;
+
+}
+/*Text nav and footer, href */
+f{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+/* --class selector-- */
+.flex-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  word-wrap: break-word;
+}
+.flex-box{
+  width: 200px;
+  height: 200px;
+  background:#D8A48F;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px;
+  font-family: adelline;
+}
+
+.countries{
+  box-shadow: 0 5px 5px #808080;
+  font-size: 1rem;
+  padding: 1em 1.2em 1em 1.2em;
+  cursor: pointer;
 }
 
 .container{
-width: 80%;
-margin:auto;
-overflow: hidden;
-
-}
-#main-header{
-  background-color:  #999966;
-  color:#fff;
-  font-family: adelline;
-  margin-left: none;
-  text-align: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
 }
 
-#main-nav{
-  background-color: #333;
-  color:#fff
-}
-#main-nav ul{
-  padding: 0;
-  list-style: none;
-
-}
-
-#main-nav li{
-  display:inline;
-}
-
-#main-nav a{
-  color: white;
+.button-slicer{
   text-decoration: none;
-  font-size: 18px;
-  padding-right: 15px;
+  font-size: 1rem;
+  position: relative;
+  margin: 10px;
+  color: #000;
+  text-align: center;
 }
+
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 32px;
+  color: #000;
+  text-align: center;
+}
+.mySlides {display:none;}
+
+/*Pseudo-elements*/
+.btn::after, .btn::before{
+  border: 3px solid #000;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.display-container{
+  position:relative
+}
+.content{
+  margin-left:auto;
+  margin-right:auto;
+  max-width:980px;
+}
+.images-style{
+  left:0;
+  bottom:0;
+  font-size:18px;
+  padding:0.01em 16px;
+  padding-top:16px;
+  padding-bottom:16px;
+  color:#000;
+  background-color:#BB8588;
+}
+.button-slicer{
+  text-align: center;
+
+}
+/* -- Pseudo-classes -- */
+
+.btn:hover::after{
+  transform: translate(-5px,-5px);
+}
+.btn:hover::before{
+  transform: translate(5px,5px);
+}
+.flex-box:hover{
+  transform: scale(1.1);
+}
+f:hover{
+  color: pink;
+}
+
+
+/* --id selector -- */
 
 #showcase{
   background-image: url('../images/background.jpg');
@@ -55,9 +163,6 @@ overflow: hidden;
   min-height: 300 px;
   margin-bottom: 30px;
   text-align: center;
-  font-family: adelline;
-
-
 }
 
 #showcase h1{
@@ -71,17 +176,13 @@ overflow: hidden;
   color:#fff;
   /* line-height: 1.6em; */
   padding-left: 30px;
-  font-family: adelline;
   text-align: left;
-  font-size: 40px;
 }
 
 #main{
   float:left;
-  width: 70%;
   padding: 0 30px;
   box-sizing: border-box;
-
 }
 
 #side-bar{
@@ -91,33 +192,63 @@ overflow: hidden;
   color:white;
   padding: 10px;
   box-sizing: border-box;
-
 }
+
 #main-footer{
-  background: #333;
+  background: #A3A380;
   color: #fff;
   text-align: center;
   padding: 20px;
   margin-top:40px;
 }
 
-@media(max-width:600px){
-  #main{
-    width:100%;
-    float:none;
-  }
-  #side-bar{
-    width:100%;
-    float:none;
-  }
+
+
+
+/* ------ Fonts ------ */
+@font-face {
+  font-family: 'adelline';
+  src:url('../fonts/Australia Script.ttf');
+}
+h2.logo{
+  font-family: adelline;
+}
+body{
+  font-family: Verdana;
+  front-size:16px;
+}
+
+#showcase{
+  font-family: adelline;
+
+}
+#side-bar h1{
+  font-family: adelline;
+  font-size: 40px;
 }
 
 
-a{
-  text-decoration: none;
-  color: white;
+
+
+/* small tablet styles */
+@media screen and (max-width: 620px){
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* large tablet & laptop styles */
+@media screen and (max-width: 960px){
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
 
 }
-a:hover{
-  color: pink;
+
+/* desktop styles */
+@media screen and (max-width: 1200px){
+
+
 }
