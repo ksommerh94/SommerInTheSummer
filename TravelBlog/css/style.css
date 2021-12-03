@@ -7,8 +7,6 @@
 }
 
 
-/* ------ base styles ------*/
-
 /* -- element selector -- */
 h2.logo{
   color:#fff;
@@ -44,8 +42,6 @@ f{
   text-decoration: none;
   color: white;
 }
-
-
 
 
 /* --class selector-- */
@@ -152,6 +148,10 @@ f{
 }
 f:hover{
   color: pink;
+}
+.buttons{
+  display: flex;
+  flex-direction: row;
 }
 
 
