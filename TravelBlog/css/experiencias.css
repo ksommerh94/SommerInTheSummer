@@ -1,0 +1,285 @@
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* -- element selector -- */
+h2.logo{
+  color:#fff;
+}
+
+body{
+  background-color: #f4f4f4;
+  color: #555;
+  font-family: Verdana;
+  front-size:16px;
+  line-height: 1.6em;
+  margin: 0;
+  width: 100;
+  display:flex;
+  flex-direction: column;
+  font-family: Verdana;
+  front-size:16px;
+}
+div a{
+  text-decoration: none;
+  color:black;
+  padding-left: 15px;
+  font-family: adelline;
+  font-size: 2em;
+  line-height: 1.8;
+
+}
+
+div p{
+  text-decoration: none;
+  color:black;
+  font-family: Verdana;
+  font-size: 0.45em;
+
+}
+/*Text nav and footer, href */
+f{
+  text-decoration: none;
+  color: white;
+}
+.btn {
+  text-decoration: none;
+  padding: 20px 50px;
+  font-size: 1.25rem;
+  position: relative;
+  margin: 32px;
+  color: #000;
+  text-align: center;
+}
+/*Pseudo-elements*/
+.btn::after, .btn::before{
+  border: 3px solid #000;
+  content: "";
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+/* -- Pseudo-classes -- */
+
+.btn:hover::after{
+  transform: translate(-5px,-5px);
+}
+.btn:hover::before{
+  transform: translate(5px,5px);
+}
+
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+}
+.container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.modal-container-btn{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  display: none;
+  overflow-y: initial !important;
+}
+
+.modal-content{
+  background-color: #fff;
+  margin-top: 100px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px 24px;
+  border-radius: 4px;
+  z-index: 4;
+
+  height: 60%;
+  overflow-y: auto;
+}
+
+.modal-header{
+  font-weight: 500;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  color: #BB8588;
+  font-weight: bold;
+}
+
+.modal-header .modal-close{
+  float: right;
+  font-size: 1.2rem;
+  background: #efefef;
+  border: 0;
+  outline: 0;
+  padding: 5px 8px;
+  border-radius: 50%
+}
+
+.modal-body{
+  color: #000;
+}
+.modal-footer{
+  padding: 15px 0;
+}
+.modal-footer .modal-close{
+  padding: 8px 16px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #BB8588;
+}
+.modal-close{
+  cursor: pointer;
+}
+.modal-open{
+  padding: 8px 16px;
+  background: var(--background-color);
+  color:#000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 2.5px;
+  font-weight: bold;
+  position:relative;
+
+  --background-color: #E3E3E3;
+  --border-size: 2px;
+}
+
+.modal-open.btn-pop::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border:var(--border-size) solid #D6CE93;
+  transition: top,left,right,bottom, 100ms ease-in-out;
+}
+
+.modal-open.btn-pop:hover::before,
+.modal-open.btn-pop:focus::before
+{
+  top: calc(var(--border-size)*-2);
+  left: calc(var(--border-size)*-2);
+  right: calc(var(--border-size)*-2);
+  bottom: calc(var(--border-size)*-2);
+
+}
+
+#showcase{
+  background-image: url('../images/background.jpg');
+  background-position: center right;
+  min-height: 300 px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#showcase h1{
+  color:#fff;
+  font-size: 50px;
+  line-height: 1.6em;
+  padding-top: 30px;
+}
+
+#side-bar h1{
+  color:#fff;
+  /* line-height: 1.6em; */
+  padding-left: 30px;
+  text-align: left;
+}
+
+#main{
+  float:left;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+#side-bar{
+  float:right;
+  width: 30%;
+  background: #333;
+  color:white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#main-footer{
+  background: #A3A380;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top:40px;
+}
+
+
+/* ------ Fonts ------ */
+@font-face {
+  font-family: 'adelline';
+  src:url('../fonts/Australia Script.ttf');
+}
+h2.logo{
+  font-family: adelline;
+}
+
+#showcase{
+  font-family: adelline;
+
+}
+#side-bar h1{
+  font-family: adelline;
+  font-size: 40px;
+}
+/* large tablet & laptop styles */
+@media screen and (max-width: 960px){
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
+  .image-gallery{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'img-5 img-2'
+        'img-3 img-3'
+        'img-4 img-7'
+        'img-1 img-6';
+
+  }
+
+}
+
+/* desktop styles */
+@media screen and (max-width: 1200px){
+
+
+}
